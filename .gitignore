@@ -1,0 +1,12 @@
+client_secrets.json
+email_notebook.pynb
+Mail_2024_July.mbox 
+output_test.csv
+token.json
+__pycache__/
+csv_output/
+mbox_output/
+part_10.mbox
+venv1/
+.ipynb_checkpoints/email_notebook-checkpoint.pynb
+email_project_clean/
