@@ -1,0 +1,63 @@
+You are provided with a Google Sheet or Excel file containing email data with the following columns: Date, From, To, Subject, Body, X-Gmail-Label, List-Unsubscribe, Message-ID.
+
+IMPORTANT: Conduct the following steps in order, without skipping ahead or responding/providing output until the end:
+
+1. Go through the document and take note of the types and frequencies of individual senders (’From’ field), email categories (’X-Gmail-Label’ field) and subject lines (’Subject’). Also note any relationships.
+2. Read through the ‘Categories and Criteria’ section below. When you are done, create a new column called ‘Sort_1’ and fill it in based on the information provided, to the best of your ability. 
+3. Return to the information in step 1 and compare that data to the results from step 2.
+4. Using the insights gathered from step 3, complete the process again, but this time filling in a new column called ‘Sort 2’ with the appropriate categories. In this second pass, work to narrow down the number of emails marked ‘Unsure’ to 5% or less. Repeat if necessary.
+5. Return the spreadsheet with the updated columns. 
+
+### Categories and Criteria
+
+### General Directions
+
+1. **Use Context:**
+    1. Refer to all parts of the row when making a determination for categorizing. Similarly, use the context of the entire sheet to determine the category of an email.
+    2. Look at emails by the same sender to determine the type of sender (business, individual, etc.), compare the language in emails to differentiate between personalized emails and marketing.
+    3. The majority of the ‘To’ fields contain my, the user’s, information. Senders with the same last name are family members.
+2. **Old Emails**: Emails over 2 years old should generally be archived unless they clearly fit the "To-Do", "Save", or "Delete" categories.
+3. **Overlap**: When an email fits multiple categories, prioritize based on the context and content.
+4. **Non-critical Newsletters**: Not all newsletters are worth keeping. Archive only those that are relevant or provide important updates; delete others.
+5. **Ambiguous Emails**: If an email does not clearly fit into any category, mark it as "Unsure." 
+
+### Priority Order for Categorization
+
+1. **Delete**:
+    - **Keywords**: "promo," "promotion," "discount," "offer," "sale," "unsubscribe," "spam," "newsletter," "advertisement," "junk," "survey."
+    - **Criteria**:
+        - Promotional emails, spam, or any emails marked as "Trash." Mail Delivery Subsystem emails can also be deleted.
+        - Customer service inquiries, unimportant or old (6+ months) notes to self, benign conversations with property managers or Craigslist sellers, and old newsletters.
+        - Social media notifications or irrelevant updates from subscribed services.
+2. **To-Do**:
+    - **Keywords**: "urgent," "reply needed," "please respond," "task," "follow-up," "action required," "pending," "reminder," "schedule," "appointment," "meeting," "deadline," "due."
+    - **Criteria**:
+        - Emails that require an action, response, or follow-up and are not promotional.
+3. **Save**:
+    - **Keywords**: "important," "receipt," "invoice," "confirmation," "payment," "contract," "agreement," "legal," "record," "certificate," "personal."
+    - **Criteria**:
+        - Emails containing important information or documents that need to be retained for records.
+        - Personal correspondence that might be valuable in the future.
+        - Sent emails with attachments or important phrases.
+4. **Archive**:
+    - **Keywords**: “therapy,” “doctor,” “receipt,” “password,” “contract,” “veterinarian,” “records.”
+    - **Criteria**:
+        - Emails older than 2 years that might otherwise be included in "Save" or “To-Do”
+        - Sentimental emails (from friends, family, etc.) or relevant non-critical updates that might be needed for future reference.
+        - Emails from health care providers, financial institutions, emails containing contracts or personal information. Anything that may be needed for future reference.
+5. **Unsure:**
+    - Emails marked as ‘Unsure’ should be reviewed again for context and resorted until 5% or less of the total number of emails are marked ‘Unsure’.
+    - **Drafts and Sent Emails**:
+        - **Drafts**: Emails in the "Drafts" folder should be reviewed for importance. If they are notes to self or incomplete messages that are no longer relevant, they can be deleted.
+        - **Sent**: Sent emails that are part of a conversation or contain important information should be categorized based on their content:
+            - Personal and important information: **Save**
+            - Completed tasks or general communication: **Archive**
+            - Unimportant or irrelevant: **Delete**
+    - **Personal Conversations**:
+        - Emails with personal, conversational content without significant information or follow-up needed should be archived if they are older or saved if they are recent and might be needed for future reference.
+        - Include additional casual keywords (e.g., "haha", "thanks", "catch up", "miss you") and emoticons.
+    - **URLs and Links**:
+        - Emails primarily containing URLs or links to articles, videos, or other external content should be archived if the content might be useful or interesting. Otherwise, they can be deleted.
+    - **Ambiguous Subject Lines**:
+        - If the subject line is unclear, use the email body and context of other emails from the same sender to determine the appropriate category.
+        - Include checks for very short or generic subject lines (e.g., "FYI", "Update", "Check this").

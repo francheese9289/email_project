@@ -10,3 +10,5 @@ part_10.mbox
 venv1/
 .ipynb_checkpoints/email_notebook-checkpoint.pynb
 email_project_clean/
+.env
+file_structure.txt

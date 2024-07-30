@@ -42,7 +42,15 @@ def upload_csv(drive_service, file_path, folder_id=None):
           media_body=media,
           fields='id'
       ).execute()
-      print(f'UPLOAD SUCCESS\nFile ID: {file.get("id")}')
+
+      file_id=file.get("id")
+
+      drive_service.permissions().create(fileId=file_id, body={'role': 'reader', 'type': 'anyone'}).execute()
+                              
+      print(f'UPLOAD SUCCESS\nFile ID: {file_id}' )
+      
+      link = f'https://drive.google.com/file/d/{file_id}/view?usp=sharing'
+      return link
 
     except Exception as error:
       print(f'An error occured: {error}')

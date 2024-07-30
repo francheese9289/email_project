@@ -13,8 +13,8 @@ def get_drive_service():
     creds = None
 
     # token.json created on first run
-    if os.path.exists("token.json"):
-        creds = Credentials.from_authorized_user_file("token.json", SCOPES)
+    if os.path.exists("config/token.json"):
+        creds = Credentials.from_authorized_user_file("config/token.json", SCOPES)
 
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
@@ -23,12 +23,12 @@ def get_drive_service():
                 creds.refresh(Request())
                 print("Credentials refreshed.")
             else:
-                flow = InstalledAppFlow.from_client_secrets_file("client_secrets.json", SCOPES)
+                flow = InstalledAppFlow.from_client_secrets_file("config/client_secrets.json", SCOPES)
                 creds = flow.run_local_server(port=63208)
                 print("New credentials obtained.")
             
             # Save the credentials for the next run
-            with open("token.json", "w") as token:
+            with open("config/token.json", "w") as token:
                 token.write(creds.to_json())
                 print("Credentials saved to token.json.")
         except Exception as e:

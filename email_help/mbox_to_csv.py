@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from email.header import decode_header
 
 def split_mbox(input_mbox, output_dir, emails_per_file=1000):
+    '''Split large mbox file into smaller files, with 1000 emails each.'''
     # Open the original MBOX file
     mbox = mailbox.mbox(input_mbox)
     
@@ -32,13 +33,16 @@ def split_mbox(input_mbox, output_dir, emails_per_file=1000):
     print(f'Split {email_count} emails into {file_count} files.')
 
 def clean_html(html_content):
+    '''Extract text from parts of email (subject, body, etc.)'''
     soup = BeautifulSoup(html_content, 'html.parser')
     return soup.get_text()
 
 def get_charset(message, default="ascii"):
+    '''Function to ID charset being used in emails.'''
     return message.get_content_charset() or default
 
 def decode_header_field(field):
+    '''Specifically for decoding the subject of an email'''
     try:
         decoded_header = decode_header(field)
         field = ''.join([str(t[0], t[1] or 'utf-8') if isinstance(t[0], bytes) else t[0] for t in decoded_header])
@@ -47,6 +51,7 @@ def decode_header_field(field):
     return field
 
 def extract_body_from_message(message):
+    '''Extracting the body from the email message.'''
     body = ''
     if message.is_multipart():
         for part in message.walk():
@@ -71,6 +76,7 @@ def extract_body_from_message(message):
     return body
 
 def mbox_to_csv(mbox_file, csv_file):
+    '''Convert individual mbox files to csv files.'''
     # Open the MBOX file
     mbox = mailbox.mbox(mbox_file)
     
